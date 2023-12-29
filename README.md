@@ -16,7 +16,7 @@ OS command injection vulnerabilities arise when an application incorporates user
 
 In addition to total compromise of the web server itself, an attacker can leverage a command injection vulnerability to pivot the attack in the organization's internal infrastructure, potentially accessing any system which the web server can access. They may also be able to create a persistent foothold within the organization, continuing to access compromised systems even after the original vulnerability has been fixed.
 
-## Description :
+## Description:
 
 Operating system command injection vulnerabilities arise when an application incorporates user-controllable data into a command that is processed by a shell command interpreter. If the user data is not strictly validated, an attacker can use shell metacharacters to modify the command that is executed, and inject arbitrary further commands that will be executed by the server.
 
@@ -32,7 +32,7 @@ If it is considered unavoidable to incorporate user-supplied data into operating
 
 * The application should use command APIs that launch a specific process via its name and command-line parameters, rather than passing a command string to a shell interpreter that supports command chaining and redirection. For example, the Java API Runtime.exec and the ASP.NET API Process.Start do not support shell metacharacters. This defense can mitigate
 
-### Unix :
+### Unix:
 
 ```
 &lt;!--#exec%20cmd=&quot;/bin/cat%20/etc/passwd&quot;--&gt;
@@ -139,7 +139,7 @@ system('cat /etc/passwd');
 <?php system("cat /etc/passwd");?>
 ```
 
-### Windows :
+### Windows:
 
 ```
 `
@@ -560,7 +560,7 @@ $(`whoami`)
 {% For c in [1,2,3]%} {{c, c, c}} {% endfor%}
 {{[] .__ Class __.__ base __.__ subclasses __ ()}}
 ```
-#### References :
+#### References:
 
 ###### Testing for Command Injection (OTG-INPVAL-013)
 
@@ -574,7 +574,7 @@ $(`whoami`)
 
 * 👉 http://cwe.mitre.org/data/definitions/77.html
 
-###### WE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'
+###### WE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')
 
 * 👉 http://cwe.mitre.org/data/definitions/78.html
 
@@ -582,12 +582,12 @@ $(`whoami`)
 
 * 👉 https://portswigger.net/kb/issues/00100100_os-command-injection
 
-### Cloning an Existing Repository ( Clone with HTTPS )
+### Cloning an Existing Repository (Clone with HTTPS)
 ```
 root@ismailtasdelen:~# git clone https://github.com/ismailtasdelen/command-injection-payload-list.git
 ```
 
-### Cloning an Existing Repository ( Clone with SSH )
+### Cloning an Existing Repository (Clone with SSH)
 ```
 root@ismailtasdelen:~# git clone git@github.com:ismailtasdelen/command-injection-payload-list.git
 ```
